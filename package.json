@@ -1,5 +1,5 @@
 {
-  "name": "booking-saas",
+  "name": "slotly-booking",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,28 +7,30 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:generate": "drizzle-kit generate:pg",
-    "db:push": "drizzle-kit push:pg",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.27.2",
-    "@vercel/postgres": "^0.5.1",
-    "date-fns": "^2.30.0",
-    "drizzle-orm": "^0.29.1",
-    "next": "14.0.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "resend": "^2.0.0"
+    "@clerk/nextjs": "^6.8.0",
+    "@vercel/postgres": "^0.10.0",
+    "date-fns": "^4.1.0",
+    "drizzle-orm": "^0.36.4",
+    "next": "15.0.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "resend": "^6.28.0"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "drizzle-kit": "^0.20.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.27.2",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
 }

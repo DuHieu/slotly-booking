@@ -4,8 +4,8 @@ import {
   timestamp, 
   integer,
   real,
-  primaryKey,
   uuid,
+  boolean,
 } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 
@@ -13,6 +13,9 @@ export const serviceProviders = pgTable("service_providers", {
   id: text("id").primaryKey(),
   email: text("email").unique().notNull(),
   name: text("name").notNull(),
+  slug: text("slug").unique().notNull(),
+  bio: text("bio"),
+  timezone: text("timezone").default("UTC").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
@@ -23,6 +26,7 @@ export const services = pgTable("services", {
   description: text("description"),
   duration: integer("duration").notNull(), // in minutes
   price: real("price"),
+  isActive: boolean("is_active").default(true).notNull(),
   providerId: text("provider_id")
     .notNull()
     .references(() => serviceProviders.id),
@@ -86,6 +90,7 @@ export const bookings = pgTable("bookings", {
   customerId: text("customer_id").references(() => customers.id),
   guestEmail: text("guest_email"),
   guestName: text("guest_name"),
+  guestPhone: text("guest_phone"),
   notes: text("notes"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
