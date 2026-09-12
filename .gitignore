@@ -42,3 +42,5 @@ next-env.d.ts
 
 # local tool settings
 .gemini/
+.agents/
+skills-lock.json
