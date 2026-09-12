@@ -8,7 +8,7 @@ import { Resend } from "resend";
 import { db, bookings, serviceProviders, services } from "@/db";
 
 function hasDatabase() {
-  return Boolean(process.env.DATABASE_URL);
+  return Boolean(process.env.DATABASE_URL || process.env.POSTGRES_URL);
 }
 
 function normalizeSlug(value: string) {
