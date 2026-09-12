@@ -17,9 +17,9 @@ Built with **Next.js 15 (App Router)**, **React 18**, **TypeScript**, **Clerk Au
 
 ## 🌐 Live Demo & Preview
 
-- **Live Demo**: *Deploying soon* — `https://slotly-booking.vercel.app` *(Placeholder)*
-- **Demo Client Booking Flow**: `/book/aura-studio`
-- **Demo Provider Console**: `/dashboard` *(Requires Clerk Sign-In)*
+- **Live Production URL**: [https://booking-saas-dusky-ten.vercel.app](https://booking-saas-dusky-ten.vercel.app)
+- **Demo Client Booking Flow**: [https://booking-saas-dusky-ten.vercel.app/book/aura-studio](https://booking-saas-dusky-ten.vercel.app/book/aura-studio)
+- **Demo Provider Console**: [https://booking-saas-dusky-ten.vercel.app/dashboard](https://booking-saas-dusky-ten.vercel.app/dashboard) *(Requires Clerk Sign-In)*
 
 ---
 
