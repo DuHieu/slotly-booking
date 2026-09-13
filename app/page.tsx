@@ -35,9 +35,15 @@ export default function Home() {
             <SignedOut>
               <SignInButton mode="modal">
                 <button className="rounded-lg border border-stone-300 bg-white px-3.5 py-2 text-stone-700 shadow-xs transition-all hover:bg-stone-50 hover:text-stone-950">
-                  Provider Sign In
+                  Sign In
                 </button>
               </SignInButton>
+              <Link
+                href="/sign-up"
+                className="hidden sm:inline-flex rounded-lg border border-emerald-700/30 bg-emerald-50 px-3.5 py-2 text-emerald-800 shadow-xs transition-all hover:bg-emerald-100"
+              >
+                Register Studio
+              </Link>
               <Link
                 href={`/book/${demoProvider.slug}`}
                 className="rounded-lg bg-emerald-700 px-4 py-2 text-white shadow-xs transition-all hover:bg-emerald-800"
